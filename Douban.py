@@ -17,12 +17,7 @@ class Spider:
         ua = UserAgent()
         header = {
             'User-Agent': ua.firefox,
-            # 'Cookie': '__mta=208959789.1585106920033.1593509077842.1593509107607.47;
-            # _lxsdk_cuid=1710fbc224bc8-0048503dcb84eb-f313f6d-1a298c-1710fbc224cc8;
-            # mojo-uuid=bc73035186bc203e1e0a1a9d69cf0c8f; uuid_n_v=v1;
-            # uuid=010A4750BAB111EA977B252D9527D646FCA82B59C6B54FB3934C361D719643F2;
-            # _csrf=ab7e60b187089a5c797755f042abdbd14eed1760f8308dc455570ee9ea4edfa2; mojo-session-'
-        }
+            }
         html = request.Request(url=url, headers=header)
         html = request.urlopen(html)
         return BeautifulSoup(html, 'html.parser')
