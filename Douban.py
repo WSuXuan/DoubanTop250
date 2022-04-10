@@ -16,7 +16,7 @@ class Spider:
     def get_page(self, url):
         ua = UserAgent()
         header = {
-            'User-Agent': ua.firefox,
+            'User-Agent': ua.firefox
             }
         html = request.Request(url=url, headers=header)
         html = request.urlopen(html)
